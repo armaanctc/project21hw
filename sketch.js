@@ -2,6 +2,7 @@ var canvas;
 var music;
 var box
 var surface1,surface2,surface3,surface4
+var edges;
 
 function preload(){
     music = loadSound("music.mp3");
@@ -38,7 +39,8 @@ surface3.shapeColor = "green"
 function draw() {
     background(rgb(0,0,0));
     //create edgeSprite
-    createEdgeSprites()
+   edges = createEdgeSprites()
+    box.bounceOff(edges);
     
     
 
